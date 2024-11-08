@@ -36,7 +36,7 @@ Public Class OpenAIClient
     End Function
 
     Public Function GetOpenAIResponseGpt4(model As String, inputText As String, contentHistory As List(Of String), apiKey As String) As String
-        Dim openAiclient As New ChatClient(model:="gpt-4", apiKey:=apiKey)
+        Dim openAiclient As New ChatClient(model:="gpt-4o", apiKey:=apiKey)
         ' Combine inputText and contentHistory into a single input
         Dim combinedInput As String = String.Join(Environment.NewLine, contentHistory) & Environment.NewLine & inputText
         Dim completion As ChatCompletion = openAiclient.CompleteChat(combinedInput)
