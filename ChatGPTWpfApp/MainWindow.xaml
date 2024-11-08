@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChatGPTWpfApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="ChatGPT Client" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="157*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="labelQuestion" Grid.Column="1" Content="Question" HorizontalAlignment="Left" Margin="100,34,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textQuestion" Grid.Column="1" HorizontalAlignment="Left" Margin="100,65,0,0" TextWrapping="Wrap" Text="Enter your Question" VerticalAlignment="Top" Width="615" Height="84"/>
+        <Button x:Name="buttonAsk" Grid.Column="1" Content="Ask" HorizontalAlignment="Left" Margin="100,169,0,0" VerticalAlignment="Top" Width="58" Click="buttonAsk_Click"/>
+        <TextBox x:Name="textAnswer" Grid.Column="1" HorizontalAlignment="Left" Margin="100,217,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="615" Height="172"/>
 
     </Grid>
 </Window>
