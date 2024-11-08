@@ -32,6 +32,13 @@ Class MainWindow
             ' Add myAnswer to contehtHistory
             _contentHistory.Add(myAnswer)
             textAnswer.Text = myAnswer
+            If (Len(textHistory.Text) = 0) Then
+                textHistory.Text = TextHistory.Text &
+                               inputText & Environment.NewLine &  myAnswer
+            Else 
+                textHistory.Text = TextHistory.Text & Environment.NewLine & Environment.NewLine &
+                                   inputText & Environment.NewLine &  myAnswer
+            End If
 
         Catch ex As IOException
             ' Handle exceptions

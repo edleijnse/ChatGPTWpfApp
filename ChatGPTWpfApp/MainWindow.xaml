@@ -5,16 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChatGPTWpfApp"
         mc:Ignorable="d"
-        Title="ChatGPT Client" Height="450" Width="800">
+        Title="ChatGPT Client" Height="750" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="157*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="68*"/>
+            <ColumnDefinition Width="54*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="labelQuestion" Grid.Column="1" Content="Question" HorizontalAlignment="Left" Margin="100,34,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textQuestion" Grid.Column="1" HorizontalAlignment="Left" Margin="100,65,0,0" TextWrapping="Wrap" Text="Enter your Question" VerticalAlignment="Top" Width="615" Height="84"/>
+        <Label x:Name="labelQuestion" Grid.Column="1" Content="Enter your Question" HorizontalAlignment="Left" Margin="100,34,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="150"/>
+        <TextBox x:Name="textQuestion" Grid.Column="1" HorizontalAlignment="Left" Margin="100,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="615" Height="84" Grid.ColumnSpan="3"/>
         <Button x:Name="buttonAsk" Grid.Column="1" Content="Ask" HorizontalAlignment="Left" Margin="100,169,0,0" VerticalAlignment="Top" Width="58" Click="buttonAsk_Click"/>
-        <TextBox x:Name="textAnswer" Grid.Column="1" HorizontalAlignment="Left" Margin="100,217,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="615" Height="172"/>
+        <TextBox x:Name="textAnswer" Grid.Column="1" HorizontalAlignment="Left" Margin="100,217,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="615" Height="172" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="textHistory" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="100,414,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="615" Height="195"/>
 
     </Grid>
 </Window>
