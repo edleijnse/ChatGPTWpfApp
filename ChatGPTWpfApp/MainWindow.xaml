@@ -18,6 +18,10 @@
         <Button x:Name="buttonAsk" Grid.Column="1" Content="Ask" HorizontalAlignment="Left" Margin="100,169,0,0" VerticalAlignment="Top" Width="58" Click="buttonAsk_Click"/>
         <TextBox x:Name="textAnswer" Grid.Column="1" HorizontalAlignment="Left" Margin="100,217,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="615" Height="172" Grid.ColumnSpan="3"/>
         <TextBox x:Name="textHistory" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="100,414,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="615" Height="195"/>
+        <Button x:Name="buttonNextQuestion" Grid.Column="1" Content="Next" HorizontalAlignment="Left" Margin="170,169,0,0" VerticalAlignment="Top" Width="60" Grid.ColumnSpan="2" Click="buttonNext_Click"/>
+        <Button x:Name="buttonCopyAnswer" Grid.Column="2" Content="Copy Answer" HorizontalAlignment="Left" Margin="95,169,0,0" VerticalAlignment="Top" Width="80" Click="buttonCopyAnswer_Click"/>
+        <Button x:Name="buttonCopyChat" Grid.Column="2" Content="Copy Chat" HorizontalAlignment="Left" Margin="185,169,0,0" VerticalAlignment="Top" Width="85" Click="buttonCopyChat_Click"/>
+        <Button x:Name="buttonClearChat" Grid.Column="2" Content="New Chat" HorizontalAlignment="Left" Margin="330,169,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="90"  Click="buttonClearChat_Click"/>
 
     </Grid>
 </Window>

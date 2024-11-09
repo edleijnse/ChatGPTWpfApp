@@ -11,11 +11,37 @@ Class MainWindow
     End Sub
 
     Private Sub buttonAsk_Click(sender As Object, e As RoutedEventArgs)
+        Mouse.OverrideCursor = Cursors.Wait
         fillAnswer()
+        Mouse.OverrideCursor = Nothing
     End Sub
+    Private Sub buttonNext_Click(sender As Object, e As RoutedEventArgs)
+        textQuestion.Text = ""
+    End Sub
+    Private Sub buttonCopyAnswer_Click(sender As Object, e As RoutedEventArgs)
+        If Not String.IsNullOrEmpty(textAnswer.Text) Then
+            Clipboard.SetText(textAnswer.Text)
+            MsgBox ("Answer copied in clipboard, use CTL-V to get it")
+        End If
+    End Sub
+    Private Sub buttonCopyChat_Click(sender As Object, e As RoutedEventArgs)
+        If Not String.IsNullOrEmpty(textHistory.Text) Then
+            Clipboard.SetText(textHistory.Text)
+            MsgBox ("complete chhat copied in clipboard, use CTL-V to get it")
+        End If
+    End Sub
+    Private Sub buttonClearChat_Click(sender As Object, e As RoutedEventArgs)
+        textQuestion.Text = ""
+        If Not String.IsNullOrEmpty(textHistory.Text) Then
+            textHistory.Text = ""
+            textAnswer.Text = ""
+        End If
+    End Sub
+
 
     Private Sub fillAnswer()
         Try
+            textAnswer.Text = ""
             Dim aiClient As New OpenAIClient()
             Dim apiKey As String = aiClient.ReadApiKey()
 
