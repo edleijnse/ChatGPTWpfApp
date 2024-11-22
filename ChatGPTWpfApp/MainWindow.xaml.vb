@@ -37,7 +37,14 @@ Class MainWindow
             textAnswer.Text = ""
         End If
     End Sub
-
+    Private Sub buttonHelp_Click(sender As Object, e As RoutedEventArgs) Handles buttonHelp.Click
+        Dim pdfPath As String = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ChatGPT_HELP.pdf")
+        Try
+            Process.Start(New ProcessStartInfo(pdfPath) With {.UseShellExecute = True})
+        Catch ex As Exception
+            MessageBox.Show("Unable to open help document.")
+        End Try
+    End Sub
 
     Private Sub fillAnswer()
         Try

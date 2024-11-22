@@ -22,6 +22,8 @@
         <Button x:Name="buttonCopyAnswer" Grid.Column="2" Content="Copy Answer" HorizontalAlignment="Left" Margin="95,169,0,0" VerticalAlignment="Top" Width="80" Click="buttonCopyAnswer_Click"/>
         <Button x:Name="buttonCopyChat" Grid.Column="2" Content="Copy Chat" HorizontalAlignment="Left" Margin="185,169,0,0" VerticalAlignment="Top" Width="85" Click="buttonCopyChat_Click"/>
         <Button x:Name="buttonClearChat" Grid.Column="2" Content="New Chat" HorizontalAlignment="Left" Margin="330,169,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="90"  Click="buttonClearChat_Click"/>
-
+        <Button x:Name="buttonHelp" Grid.Column="2" Content="Help" HorizontalAlignment="Left" Margin="450,169,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"  Width="60" Click="buttonHelp_Click"/>
+        <!-- WebBrowser Control -->
+        <WebBrowser x:Name="pdfWebBrowser" Grid.Column="2" Visibility="Collapsed"/>
     </Grid>
 </Window>
