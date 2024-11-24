@@ -32,6 +32,7 @@ Class MainWindow
     End Sub
     Private Sub buttonClearChat_Click(sender As Object, e As RoutedEventArgs)
         textQuestion.Text = ""
+        _contentHistory.Clear()
         If Not String.IsNullOrEmpty(textHistory.Text) Then
             textHistory.Text = ""
             textAnswer.Text = ""
