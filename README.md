@@ -134,7 +134,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For any queries or support, please contact [support@chatgptwpfapp.com](mailto:support@chatgptwpfapp.com).
+For any queries or support, please contact [ed@leijnse.info](mailto:support@chatgptwpfapp.com).
 
 ---
 
